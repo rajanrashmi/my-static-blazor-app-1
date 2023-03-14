@@ -1,9 +1,11 @@
 ﻿@page "/"
 @inject NavigationManager NavigationManager
+<h1>Welcome to Rajan Shopping List</h1>
 
 @code {
     protected override void OnInitialized()
     {
-        NavigationManager.NavigateTo("/products");
+       // NavigationManager.NavigateTo("/products");
+        NavigationManager.NavigateTo("/");
     }
 }
