@@ -1,6 +1,8 @@
 ﻿@page "/product/{productId:int}"
+
 @inject HttpClient http
 @inject NavigationManager navigation
+@attribute [Authorize]
 
 @if (product == null)
 {

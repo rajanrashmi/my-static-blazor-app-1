@@ -1,6 +1,7 @@
 ﻿@page "/products"
 @inject HttpClient http
 @inject NavigationManager navigation
+@attribute [Authorize]
 
 <div class="content-container">
     <ListHeader Title="My List"

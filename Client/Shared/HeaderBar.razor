@@ -11,9 +11,22 @@
             </a>
             <NavLink to="/" class="navbar-item nav-home">
                 <span class="brand-first">RAJAN</span>
-                <span class="brand-second">SHOPPING</span>
+                <span class="brand-second">BUCKET</span>
                 <span class="brand-third">LIST</span>
             </NavLink>
         </div>
+       
+        <div >
+            <AuthorizeView>
+                <Authorized>
+                    Hello, @context.User.Identity.Name!
+                    <a href="/.auth/logout?post_logout_redirect_uri=/">Log out</a>
+                </Authorized>
+                <NotAuthorized>
+                    <a href="/login-providers">Log in</a>
+                </NotAuthorized>
+            </AuthorizeView>
+        </div>
     </nav>
+    
 </header>
