@@ -3,12 +3,12 @@
          role="navigation"
          aria-label="main navigation">
         <div class="navbar-brand">
-            <a class="navbar-item"
+            @*<a class="navbar-item"
                href="https://blazor.net/"
                target="_blank"
                rel="noopener noreferrer">
                 <i class="fab js-logo fa-microsoft fa-2x" aria-hidden="true" />
-            </a>
+            </a>*@
             <NavLink to="/" class="navbar-item nav-home">
                 <span class="brand-first">RAJAN</span>
                 <span class="brand-second">BUCKET</span>
@@ -19,14 +19,16 @@
         <div >
             <AuthorizeView>
                 <Authorized>
-                    Hello, @context.User.Identity.Name!
-                    <a href="/.auth/logout?post_logout_redirect_uri=/">Log out</a>
+                    Hello, @context.User.Identity.Name! Your Authentication Provider:@context.User.Identity.AuthenticationType
+                    <a style="position:absolute; right:50px"href="/.auth/logout?post_logout_redirect_uri=/">Log out</a>
                 </Authorized>
                 <NotAuthorized>
-                    <a href="/login-providers">Log in</a>
+                    <a style="position:absolute; right:50px" href="/login-providers">Log in</a>
                 </NotAuthorized>
             </AuthorizeView>
         </div>
+
     </nav>
-    
+
+
 </header>
